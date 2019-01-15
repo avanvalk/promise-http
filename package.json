@@ -1,0 +1,29 @@
+{
+  "name": "promise-http",
+  "version": "1.0.0",
+  "description": "",
+  "main": "promises.js",
+  "scripts": {
+    "test:watch": "jest --watch",
+    "start": "node server.js",
+    "start:client": "node client.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avanvalk/promise-http.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/avanvalk/promise-http/issues"
+  },
+  "homepage": "https://github.com/avanvalk/promise-http#readme",
+  "devDependencies": {
+    "eslint": "^5.12.0",
+    "jest": "^23.6.0"
+  },
+  "dependencies": {
+    "superagent": "^4.1.0"
+  }
+}
