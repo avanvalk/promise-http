@@ -10,7 +10,7 @@ fsPromises.writeFile('./http-copy.md', 'this is the promise')
   .catch(err => console.error(err));
 
 fsPromises.readFile('test.txt')
-  .then((data) => fsPromises.writeFile('test3.txt', data))
+  .then((data) => fsPromises.writeFile('test-copy.txt', data))
   .catch(err => console.error(err));
 
 const readPromise = src => new Promise((resolve, reject) => {
