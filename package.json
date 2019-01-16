@@ -5,7 +5,7 @@
   "main": "promises.js",
   "scripts": {
     "test:watch": "jest --watch",
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "start:client": "node client.js"
   },
   "repository": {
