@@ -5,10 +5,10 @@ describe('app', () => {
   it('has a tester route', () => {
     return request(app)
       // add .post and .set
-      .get('/tester')
-      .query({ name: 'ryan' })
+      .post('/note')
+      .send({ name: 'I am a note' })
       .then(res => {
-        expect(res.body).toEqual({ hi: 'there ryan' });
+        expect(res.status).toEqual(204);
       });
   });
 });
