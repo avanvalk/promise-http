@@ -14,7 +14,7 @@ describe('rick and morty service', () => {
         });
       });
   });
-  it('gets a character by id', () => {
+  it('gets all characters', () => {
     return getCharacters()
       .then(character => {
         expect(character).toHaveLength(20);

@@ -1,3 +1,4 @@
+
 const request = require('supertest');
 const app = require('../lib/app');
 
@@ -13,6 +14,30 @@ describe('app', () => {
           species: 'Human',
           status: 'Alive'
         });
+      });
+  });
+  it('can post a note to a specific character', () => {
+    return request(app)
+      .post('/characters')
+      .send({ characterId: 1, note: 'My favorite character' })
+      .then(() => {
+        return request(app)
+          .get('/characters/1');
+      })
+      .then(res => {
+        expect(res.status).toEqual(200);
+      });
+  });
+  it('can get a character by id and their note', () => {
+    return request(app)
+      .post('/characters')
+      .send({ characterId: 1, note: 'My favorite character' })
+      .then(() => {
+        return request(app)
+          .get('/characters/1');
+      })
+      .then(res => {
+        expect(res.text).toContain('My favorite character');
       });
   });
 });
