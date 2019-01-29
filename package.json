@@ -4,6 +4,8 @@
   "description": "",
   "main": "promises.js",
   "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
     "test:watch": "jest --watch",
     "test": "jest",
     "start": "nodemon server.js"
